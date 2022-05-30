@@ -1,4 +1,4 @@
-fn fibonacci_sum_even(max_n: usize) -> usize {
+pub fn fibonacci_sum_even(max_n: usize) -> usize {
     let mut sum = 0;
     let mut first_term = 1;
     let mut second_term = 2;
@@ -17,4 +17,5 @@ fn fibonacci_sum_even(max_n: usize) -> usize {
 fn test_fibonacci_sum_even() {
     assert_eq!(fibonacci_sum_even(10), 10);
     assert_eq!(fibonacci_sum_even(50), 44);
+    assert_eq!(fibonacci_sum_even(4000000), 4613732);
 }
