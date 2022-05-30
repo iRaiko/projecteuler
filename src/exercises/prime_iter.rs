@@ -1,5 +1,17 @@
+use std::ops::Index;
+
+#[derive(Debug)]
 pub struct Primes {
     primes: Vec<usize>,
+}
+
+impl Index<usize> for Primes 
+{
+    type Output = usize;
+
+    fn index(&self, index: usize) -> &Self::Output {
+        &self.primes[index]
+    }
 }
 
 impl Primes {
